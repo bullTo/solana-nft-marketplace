@@ -1,0 +1,23 @@
+.trending {
+  position: relative;
+  overflow: hidden; /* Ensure the pseudo-element does not overflow */
+}
+.trending::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../../../assets/images/background/road.jpg);
+  background-repeat: no-repeat;
+  background-size: 170%, cover;
+  background-position: center;
+  filter: blur(3px); /* Adjust the blur value as needed */
+  z-index: -1;
+}
+
+.trending > * {
+  position: relative;
+  z-index: 1;
+}

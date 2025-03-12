@@ -1,0 +1,36 @@
+.seller {
+  background: linear-gradient(45deg, #9f6657, #2c231b, #86a8e7, #2a0e46);
+  background-size: 300% 300%;
+  animation: gradient-animation 6s infinite alternate;
+}
+.seller__section-title h3 {
+  color: #fff;
+}
+
+.seller__img {
+  width: 80px;
+  height: 80px;
+}
+
+.seller__content h6 {
+  font-size: 1rem;
+  color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+  .seller__content h6 {
+    font-size: 0.8rem !important;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

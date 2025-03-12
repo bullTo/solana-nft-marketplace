@@ -1,0 +1,69 @@
+.step-section {
+  position: relative;
+  overflow: hidden; /* Ensure the pseudo-element does not overflow */
+  min-height: 550px;
+}
+.step-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../../../assets/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.step-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sell-buy-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sell-buy-container .glass {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  background: linear-gradient(#fff2, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin: 45px 25px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(10 * 1deg));
+}
+
+.sell-buy-container:hover .glass {
+  transform: rotate(0deg);
+  margin: 45px 70px;
+}
+
+.sell-buy-container .glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.sell-buy-container .glass svg {
+  font-size: 2.5em;
+  fill: #fff;
+}
